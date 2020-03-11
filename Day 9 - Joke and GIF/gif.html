@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: cornflowerblue;
+    }
+</style>
+<body>
+    <div>
+        <button onclick="myFunction()">Jokes</button>
+        <p id="jokes"></p>
+        <p></p>
+        <p>
+            <img id="img"/>
+        </p>
+    </div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script>
+    function myFunction(){
+    $.ajax({
+      url: "https://api.chucknorris.io/jokes/random",
+      method: "GET",
+      success: function(data) {
+        console.log(data.value);
+        //document.write(result.value)
+        document.getElementById("jokes").innerText += data.value;
+      },
+      error: function(error) {
+        console.log(`Error: ${error}`);
+      }
+    });  
+    //document.write(" hello world");
+
+    $.ajax({
+      url: "https://api.giphy.com/v1/gifs/random?api_key=r5abRkTs9Gi33OG791E4tyBK3vUs2kl8&tag=burger",
+      method: "GET",
+      success: function(data) {
+        console.log(data.data.images.original.url);
+        //document.write(result.value)
+        document.getElementById("img").src=data.data.images.original.url;
+      }
+    //   error: function(error) {
+    //     console.log(`Error: ${error}`);
+    //   }
+    });  
+    }
+</script>
+</html>

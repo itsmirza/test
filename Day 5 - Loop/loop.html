@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Longest Name</title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+
+    
+    function greet(name) {
+      //complete this function
+      for (let x=0; x<names.length; x++){
+      console.log("Hello, "+ names[x] +"!")  
+        }  
+    }
+
+
+    // function greet(name)
+    // {
+    //     let y=0
+    //     while (y<6) {
+    //         console.log("Hello, "+names[y]+"!")
+    //         y++
+    //     }   
+    // }
+    // greet(name)
+
+    const names = ['Nicholasss', 'Kevin', 'Audrey', 'KJ', 'Delilah', 'Josh']
+
+   
+    
+    
+
+    // let longest_name = ''
+
+    // let i = 0
+    // while (i < names.length) {
+    //   // complete this logic
+    //   //longest_name = names[i].length
+      
+      
+    //   if( names.length==longest_name.length){
+    //       console.log("Longest name is "+ longest_name)
+    //       break
+    //   }
+    //   i++
+      
+    // }
+
+    let i=0;
+    let longname=0;
+    for (i; i<names.length;i++){
+        if (names[i].length>longname){
+            longname = names[i].length;
+            longest_name = names[i];
+        }
+    }
+    console.log(`Longest name is:${longest_name}`)
+
+  </script>
+</html>

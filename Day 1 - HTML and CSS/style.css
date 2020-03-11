@@ -1,0 +1,52 @@
+body {
+    background-color: darkgray;
+}
+
+div{
+    border-style: dashed;
+    font-family: 'Solway', serif; 
+    width: 500px;
+    height: 120px;
+}
+
+header{
+    
+    height: 80px;
+    background-color:#3a3a3a ;
+    color : white 
+           
+}
+header span {
+    
+    background-color:#3a3a3a ; 
+    color : white 
+       
+}
+
+header a{
+    margin: 20px;
+    color: white;
+}
+
+footer {
+    background-color: #3a3a3a;
+    height: 150px;
+    font-family: 'Solway', serif; 
+}
+
+footer #statement{
+    color:white;
+}
+
+footer #button{
+    border :100px;
+    background-color: yellow;
+    border-radius: 10px;
+    width: 450px;
+    height: 30px;    
+}
+
+body p::first-letter{
+    font-weight: bold;
+}
+
